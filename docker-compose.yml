@@ -26,12 +26,6 @@ services:
       - db_data:/var/lib/mysql
     cap_add:
       - SYS_NICE
-  mail:
-    image: rnwood/smtp4dev:v3
-    ports:
-      - "5000:80"
-    volumes:
-      - smtp_data:/smtp4dev
   sso:
     image: jboss/keycloak
     ports:
@@ -45,5 +39,4 @@ services:
 
 volumes:
   liferay_data:
-  smtp_data:
   db_data:
