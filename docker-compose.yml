@@ -30,6 +30,7 @@ services:
     image: jboss/keycloak
     ports:
       - "8080:8080"
+      - "8443:8443"
     env_file:
       - ./keycloak/variables.env
     volumes:
